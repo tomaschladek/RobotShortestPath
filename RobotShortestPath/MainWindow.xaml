@@ -1,0 +1,25 @@
+﻿<Window x:Class="RobotShortestPath.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RobotShortestPath"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top">
+            <Button Content="Enter START" Click="SetStart"></Button>
+            <Button Content="Enter END" Click="SetEnd"></Button>
+            <Button Content="Start Obstacle" Click="StartObstacle"></Button>
+            <Button Content="End Obstacle" Click="EndObstacle"></Button>
+            <Button Content="Draw full graph" Click="DrawFull"></Button>
+            <Button Content="Draw reduced graph" Click="DrawReduced"></Button>
+            <Button Content="Draw path graph" Click="DrawPath"></Button>
+            <Button Content="Result" Click="DrawResult"></Button>
+            <Button Content="Remove edges" Click="RemoveEdges"></Button>
+            <Button Content="Clear" Click="Clear"></Button>
+            <Label Content="{Binding Mode}"></Label>
+        </WrapPanel>
+        <Canvas Background="White" Name="AreaCanvas" MouseLeftButtonDown="AreaCanvas_OnMouseLeftButtonDown"></Canvas>
+    </DockPanel>
+</Window>
